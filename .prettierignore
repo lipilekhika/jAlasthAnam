@@ -1,0 +1,16 @@
+.DS_Store
+node_modules
+/dist
+/package
+.env
+.env.*
+!.env.example
+
+# Ignore files for PNPM, NPM and YARN
+pnpm-lock.yaml
+src/langs/English.yaml
+public/404.html
+# use this for safety
+# "endOfLine": "crlf", in .prettierrc
+# git config core.autocrlf true
+# git config core.safecrlf false

@@ -1,0 +1,5 @@
+---
+const ID: string = import.meta.env.PUBLIC_GOOGLE_SEARCH_ID;
+---
+
+{Astro.url.pathname === '/' && ID && <meta name="google-site-verification" content={ID} />}

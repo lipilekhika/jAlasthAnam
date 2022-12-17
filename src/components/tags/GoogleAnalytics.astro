@@ -1,0 +1,15 @@
+---
+const ID: string = import.meta.env.PUBLIC_GOOGLE_ANALYTICS_ID!;
+---
+
+{
+  ID && (
+    <>
+      <script type="text/partytown" src={`https://www.googletagmanager.com/gtag/js?id=${ID}`} />
+      <script type="text/partytown" define:vars={{ ID }}>
+        window.dataLayer = window.dataLayer || []; function gtag() {dataLayer.push(arguments)}
+        gtag('js', new Date()); gtag('config', ID);
+      </script>
+    </>
+  )
+}

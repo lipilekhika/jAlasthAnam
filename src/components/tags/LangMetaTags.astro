@@ -1,0 +1,30 @@
+---
+import { default_locale, get_link, locale_keys } from 'tools/i18n';
+
+const asPath = (() => {
+  let vl = get_link(Astro.url.pathname, default_locale);
+  return vl == '/' ? '' : vl;
+})();
+const SITE_URL: string = import.meta.env.PUBLIC_SITE_URL || '';
+const { description, title } = Astro.props;
+---
+
+<meta property="og:title" content={title} />
+<meta name="description" content={description} />
+<meta property="og:description" content={description} />
+<meta property="og:site_name" content={title} />
+{
+  locale_keys.map((lcl) => (
+    <link
+      rel="alternate"
+      href={`${SITE_URL}/${(lcl !== default_locale ? lcl : '') + asPath}`}
+      hreflang={lcl}
+    />
+  ))
+}
+<meta
+  property="og:image"
+  content="https://cdn.jsdelivr.net/gh/lipilekhika/dist@latest/i/bhasha.jpg"
+/>
+<meta property="og:image:width" content="465.5" />
+<meta property="og:image:height" content="175" />

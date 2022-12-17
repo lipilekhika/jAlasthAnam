@@ -1,0 +1,15 @@
+{
+  "langs": {
+    "Brahmic": "https://en.wikipedia.org/wiki/Brahmic_scripts",
+    "Romanized": "https://en.wikipedia.org/wiki/ISO_15919",
+    "Modi": "https://en.wikipedia.org/wiki/Modi_script",
+    "Sharada": "ttps://en.wikipedia.org/wiki/Sharada_script",
+    "Brahmi": "https://en.wikipedia.org/wiki/Brahmi_script",
+    "Siddham": "https://en.wikipedia.org/wiki/Siddha%E1%B9%83_script",
+    "Granth": "https://en.wikipedia.org/wiki/Grantha_script"
+  },
+  "mukhya": {
+    "web_app": "/web_app_link",
+    "web_site": "/web_site_link"
+  }
+}
