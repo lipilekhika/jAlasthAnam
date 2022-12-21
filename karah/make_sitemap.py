@@ -1,27 +1,27 @@
 import json, jinja2, os, shutil, sys
 
 
-def write(loc, val):
+def write(loc: str, val: str):
     f = open(loc, encoding="utf-8", mode="w")
     f.write(val)
     f.close()
 
 
-def read(loc):
+def read(loc: str):
     f = open(loc, encoding="utf-8", mode="r")
     vl = f.read()
     f.close()
     return vl
 
 
-def delete_folder(loc):
+def delete_folder(loc: str):
     try:
         shutil.rmtree(loc)
     except:
         pass
 
 
-def render(fl, **o):
+def render(fl: str, **o):
     return (
         jinja2.Environment(loader=jinja2.FileSystemLoader("./karah/template"))
         .get_template(fl)
@@ -46,7 +46,7 @@ LOCALES = DATA["locales"]
 
 
 def make_sitemap():
-    ROOT = os.getenv("PUBLIC_SITE_URL") or ""
+    ROOT_URL = os.getenv("PUBLIC_SITE_URL") or ""
     SITEMAP_LINKS = []
 
     def normalise_url(url: str):
@@ -57,13 +57,23 @@ def make_sitemap():
         for lcl in LOCALES:
             link = lnk.copy()
             if lcl == DEFAULT_LOCALE:
-                link[0] = ROOT + url_part
+                link[0] = ROOT_URL + url_part
             else:
-                link[0] = f"{ROOT}/{lcl+url_part}"
+                link[0] = f"{ROOT_URL}/{lcl+url_part}"
             SITEMAP_LINKS.append(link)
 
-    write("dist/sitemap.xml", render("sitemap.xml", SITEMAP_LINKS=SITEMAP_LINKS))
-    write("dist/robots.txt", render("robots.txt", SITE_URL=ROOT))
+    TEMPLATES = {
+        "dist/sitemap.xml": ["sitemap.xml", dict(SITEMAP_LINKS=SITEMAP_LINKS)],
+        "dist/robots.txt": [
+            "robots.txt",
+            dict(SITE_URL=ROOT_URL, DEFAULT_LOCALE=DEFAULT_LOCALE),
+        ],
+        "dist/_redirects": ["_redirects", dict(DEFAULT_LOCALE=DEFAULT_LOCALE)],
+    }
+    for fl in TEMPLATES:
+        tmp: str = TEMPLATES[fl][0]
+        data = TEMPLATES[fl][1]
+        write(fl, render(tmp, **data))
 
 
 def migrate_routes():
@@ -78,15 +88,15 @@ def migrate_routes():
         if len(os.listdir(nm)) == 0:
             delete_folder(nm)
 
-    ROOT = "dist"
+    ROOT_DIR = "dist"
     for t in LINKS:
         x = t[0]
         for lcl in LOCALES:
-            nm = f"{ROOT}/{lcl+x}"
+            nm = f"{ROOT_DIR}/{lcl+x}"
             normalise_html_file_location(nm)
             if lcl == DEFAULT_LOCALE and x != "/":
                 # to normalize files like `drive/index.html` -> drive.html
-                normalise_html_file_location(ROOT + x)
+                normalise_html_file_location(ROOT_DIR + x)
 
 
 if sys.argv[-1] != "no-migrate":
