@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /assets/
 
-Sitemap: {{ SITE_URL }}
+Sitemap: {{ SITE_URL }}/sitemap.xml
