@@ -15,7 +15,6 @@ pnpm-debug.log*
 .env
 .env.production
 
-/react
 
 .env*
 .flaskenv*
