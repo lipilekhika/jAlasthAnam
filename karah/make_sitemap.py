@@ -14,13 +14,6 @@ def read(loc: str):
     return vl
 
 
-def delete_folder(loc: str):
-    try:
-        shutil.rmtree(loc)
-    except:
-        pass
-
-
 def render(fl: str, **o):
     return (
         jinja2.Environment(loader=jinja2.FileSystemLoader("./karah/template"))
@@ -64,10 +57,7 @@ def make_sitemap():
 
     TEMPLATES = {
         "dist/sitemap.xml": ["sitemap.xml", dict(SITEMAP_LINKS=SITEMAP_LINKS)],
-        "dist/robots.txt": [
-            "robots.txt",
-            dict(SITE_URL=ROOT_URL, DEFAULT_LOCALE=DEFAULT_LOCALE),
-        ],
+        "dist/robots.txt": ["robots.txt", dict(SITE_URL=ROOT_URL)],
         "dist/_redirects": ["_redirects", dict(DEFAULT_LOCALE=DEFAULT_LOCALE)],
     }
     for fl in TEMPLATES:
@@ -83,18 +73,19 @@ def migrate_routes():
         pth = f'{nm+("/" if x!="/" else "")}index.html'
         if nm[-1] == "/":
             nm = nm[:-1]
-        write(f"{nm}.html", read(pth))
+        shutil.copyfile(pth, f"{nm}.html")
         os.remove(pth)
         if len(os.listdir(nm)) == 0:
-            delete_folder(nm)
+            shutil.rmtree(nm)
 
     ROOT_DIR = "dist"
     for t in LINKS:
         x = t[0]
         for lcl in LOCALES:
-            nm = f"{ROOT_DIR}/{lcl+x}"
-            normalise_html_file_location(nm)
-            if lcl == DEFAULT_LOCALE and x != "/":
+            if lcl != DEFAULT_LOCALE:
+                nm = f"{ROOT_DIR}/{lcl+x}"
+                normalise_html_file_location(nm)
+            elif lcl == DEFAULT_LOCALE and x != "/":
                 # to normalize files like `drive/index.html` -> drive.html
                 normalise_html_file_location(ROOT_DIR + x)
 
