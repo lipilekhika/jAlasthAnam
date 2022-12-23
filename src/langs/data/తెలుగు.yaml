@@ -1,18 +1,18 @@
 main:
   title:
-    - లిపి లేఖిక
+    - లిపి లేఖికా
     - పూర్తి వేగం మరియు ఖచ్చితత్త్వంతో భారతీయ భాషలను టైప్ చేయండి
-  description: పూర్తి వేగం మరియు ఖచ్చితత్త్వంతో భారతీయ భాషలను టైప్ చేయడానికి టూల్
+  description: పూర్తి వేగం మరియు ఖచ్చితత్త్వంతో భారతీయ భాషలను టైప్ చేసే టూల్
   features:
     name: ఫీచర్లు
     lekhan_sahayika:
       title: లేఖన్ సహాయికా
       lekh: <features.lekhan_sahayika>
     phonetic_table:
-      title: ఫొనెటిక్ వినియోగ పట్టికలు
+      title: ధ్వని వినియోగ పట్టికలు
       lekh: <features.phonetic_table>
     brahmic_support:
-      title: అన్ని బ్రాహ్మిక్ స్క్రిప్ట్ లకు సపోర్ట్ చేయండి
+      title: అన్ని బ్రాహ్మిక్ లిపిలకు మద్దతు ఇవ్వండి
       lekh: <features.brahmic_support>
     parivartak:
       title: లిపి పరివర్తక్

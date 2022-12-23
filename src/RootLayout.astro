@@ -6,6 +6,7 @@ import LangChange from 'components/LangChange.svelte';
 import GoogleSearch from 'components/tags/GoogleSearch.astro';
 import GoogleAnalytics from 'components/tags/GoogleAnalytics.astro';
 // import { Spa } from 'astro-spa';
+// <!-- <Spa prefetch={false} defaultAnimation={false} progressBar={false} /> -->
 
 const { title, favicon, className, metaTags } = Astro.props;
 const locale = get_current_locale(Astro.params.lang!);
@@ -26,6 +27,5 @@ const URL = Astro.url.pathname;
     <slot />
     <LangChange client:idle value={locale} />
     <GoogleAnalytics />
-    <!-- <Spa prefetch={false} defaultAnimation={false} progressBar={false} /> -->
   </body>
 </html>
