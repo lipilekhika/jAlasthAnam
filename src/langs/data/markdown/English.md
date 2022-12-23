@@ -8,7 +8,8 @@ The Usage Tables (or Transliteration Maps) use **closest Alphabet** in English t
 
 # features.brahmic_support
 
-Lipi Lekhika currently supports all major modern _Indian Scripts_ Derived from the **_[Brahmic Script](links:/langs/Brahmic)_**. In the future Support for South-East Asian Scripts and other related Scripts will also be added. Currently Supported Languages :- Hindi, Bengali, Telugu, Tamil, Marathi, Gujarati, Malayalam, Kannada, Odia, Konkani, Assamese, Sanskrit, Sinhala, Punjabi(Gurumukhi). It also has support for **_lossless_** conversion and typing of Indian Languages with [Romanized](links:/langs/Romanized) (ISO 15919) standard. Lipi Lekhika also supports [Modi](links:/langs/Modi), [Sharada](links:/langs/Sharada), [Brahmi](links:/langs/Brahmi), [Siddham](links:/langs/Siddham) and [Granth](links:/langs/Granth).
+Lipi Lekhika currently supports all major modern _Indian Scripts_ Derived from the **_[Brahmic Script](links:/langs/Brahmic)_**. In the future Support for South-East Asian Scripts and other related Scripts will also be added.  
+Currently Supported Languages :- Hindi, Bengali, Telugu, Tamil, Marathi, Gujarati, Malayalam, Kannada, Odia, Konkani, Assamese, Sanskrit, Sinhala, Punjabi(Gurumukhi). It also has support for **_lossless_** conversion and typing of Indian Languages with [Romanized](links:/langs/Romanized) (ISO 15919) standard. Lipi Lekhika also supports [Modi](links:/langs/Modi), [Sharada](links:/langs/Sharada), [Brahmi](links:/langs/Brahmi), [Siddham](links:/langs/Siddham) and [Granth](links:/langs/Granth).
 
 # features.parivartak
 

@@ -1,6 +1,14 @@
 import links from './links.json';
 import { val_from_adress } from 'tools/json';
+import Markdown from 'markdown-it';
 
+const md = new Markdown();
+
+const replace_all = (str: string, replaceWhat: string, replaceTo: string) => {
+  replaceWhat = replaceWhat.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+  var re = new RegExp(replaceWhat, 'g');
+  return str.replace(re, replaceTo);
+};
 const reg_index = (str: string, pattern: RegExp) => {
   let ind: [number, string][] = [],
     mtch: RegExpExecArray = null!;
@@ -12,6 +20,8 @@ const substring = (val: string, from = 0, to: number = null!) => {
   if (to > 0) return val.substring(from, to);
   else if (to < 0) return val.substring(from, val.length + to);
 };
+
+/** This function should replace template link into `links` */
 export const replace_link_text = (vl: string) => {
   const template = (link: string) => `](${link})`;
   const regex = /\]\(links:.+?\)/g;
@@ -37,4 +47,28 @@ export const replace_link_text = (vl: string) => {
     ind_change += _new.length - (ind[1] - ind[0]);
   }
   return vl;
+};
+
+export const markdownify_keys = (val: string, mark_info: { [vl: string]: string }) => {
+  if (/<.+>/.test(val)) {
+    let nm = substring(val, 1, -1)!;
+    if (nm in mark_info) val = mark_info[nm];
+  }
+  let res = md.render(val);
+  if (res.startsWith('<p>') && res.endsWith('</p>\n')) res = res.substring(3, res.length - 5);
+  return res;
+};
+/** This function should extract all the `markdown` from the directory */
+export const getMarkdownValues = (val: string) => {
+  val = replace_all(val, '\r\n', '\n');
+  // $(?![\n]) is the EOF matcher
+  const res: { [vl: string]: string } = {};
+  let regex = /# .+?\n\n.+?\n(\n|$(?![\n]))/gs;
+  let matches = reg_index(val, regex).map((v) => v[1]);
+  for (let x of matches) {
+    let head = reg_index(x, /(?<=# ).+?(?=\n)/g).map((v) => v[1])[0];
+    let lekh = reg_index(x, /(?<=# .+?\n\n).+?(?=\n(\n|$(?![\n])))/gs).map((v) => v[1])[0];
+    res[head] = lekh;
+  }
+  return res;
 };
