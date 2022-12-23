@@ -6,7 +6,7 @@ main:
   features:
     name: ਫੀਚਰ
     lekhan_sahayika:
-      title: Lekhan Sahayika
+      title: ਲੇਖਨ ਸਹਾਯਿਕਾ
       lekh: (features.lekhan_sahayika)
     phonetic_table:
       title: ਫੋਨੇਟਿਕ ਵਰਤੋਂ ਟੇਬਲ
