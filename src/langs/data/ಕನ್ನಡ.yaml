@@ -7,13 +7,13 @@ main:
     name: ಲಕ್ಷಣಗಳು
     lekhan_sahayika:
       title: ಲೇಖಾನ್ ಸಹಾಯ್ಕಾ
-      lekh: <features.lekhan_sahayika>
+      lekh: (features.lekhan_sahayika)
     phonetic_table:
       title: ಫೋನೆಟಿಕ್ ಬಳಕೆ ಕೋಷ್ಟಕಗಳು
-      lekh: <features.phonetic_table>
+      lekh: (features.phonetic_table)
     brahmic_support:
       title: ಎಲ್ಲಾ ಬ್ರಾಹ್ಮಿಕ್ ಲಿಪಿಗಳನ್ನು ಬೆಂಬಲಿಸಿ
-      lekh: <features.brahmic_support>
+      lekh: (features.brahmic_support)
     parivartak:
       title: ಲಿಪಿ ಪರಿವಾರಕ್
-      lekh: <features.parivartak>
+      lekh: (features.parivartak)

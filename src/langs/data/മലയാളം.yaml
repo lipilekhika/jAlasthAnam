@@ -8,13 +8,13 @@ main:
     name: സവിശേഷതകൾ
     lekhan_sahayika:
       title: ലേഖാൻ സഹായിക
-      lekh: <features.lekhan_sahayika>
+      lekh: (features.lekhan_sahayika)
     phonetic_table:
       title: ഫോണറ്റിക് ഉപയോഗ പട്ടികകൾ
-      lekh: <features.phonetic_table>
+      lekh: (features.phonetic_table)
     brahmic_support:
       title: എല്ലാ ബ്രാഹ്മിക് സ്ക്രിപ്റ്റുകളും പിന്തുണയ്ക്കുക
-      lekh: <features.brahmic_support>
+      lekh: (features.brahmic_support)
     parivartak:
       title: ലിപി പരിവാർതക്
-      lekh: <features.parivartak>
+      lekh: (features.parivartak)

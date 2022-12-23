@@ -50,7 +50,7 @@ export const replace_link_text = (vl: string) => {
 };
 
 export const markdownify_keys = (val: string, mark_info: { [vl: string]: string }) => {
-  if (/<.+>/.test(val)) {
+  if (/^\(.+?\)$/.test(val)) {
     let nm = substring(val, 1, -1)!;
     if (nm in mark_info) val = mark_info[nm];
   }

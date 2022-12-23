@@ -71,7 +71,7 @@ def pre_process(func=0):
         vl = markdown.markdown(vl)
         if vl.startswith("<p>") and vl.endswith("</p>"):
             vl = vl[3:-4]
-        template_found = re.match("<.+?>", vl)
+        template_found = re.match(r"^\(.+?\)$", vl) and vl[1:-1] in mark_db[to]
         tmp = vl
         templ_nm = None
         if template_found:

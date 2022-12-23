@@ -8,13 +8,13 @@ main:
     name: وِشےشَتآےں
     lekhan_sahayika:
       title: لےکھَنَ سَہآیِکآ
-      lekh: <features.lekhan_sahayika>
+      lekh: (features.lekhan_sahayika)
     phonetic_table:
       title: دھوَنیآتمَکَ پراَویاوگَ ساُوچِیآں
-      lekh: <features.phonetic_table>
+      lekh: (features.phonetic_table)
     brahmic_support:
       title: سَبھاِی برآہمِکَ لِپِیآں اُپَلَبدھَ
-      lekh: <features.brahmic_support>
+      lekh: (features.brahmic_support)
     parivartak:
       title: لِپِ پَرِوَرتَکَ
-      lekh: <features.parivartak>
+      lekh: (features.parivartak)
