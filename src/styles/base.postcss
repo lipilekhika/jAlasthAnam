@@ -8,14 +8,11 @@
   }
 
   svg {
-    display: inline-block;
+    @apply inline-block;
   }
 }
 
 @layer utilities {
-  .link_underline div > h2 + p a {
-    @apply underline;
-  }
   .cursor-button {
     @apply cursor-default sm:cursor-pointer;
   }
