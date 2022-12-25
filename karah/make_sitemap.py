@@ -56,9 +56,9 @@ def make_sitemap():
             SITEMAP_LINKS.append(link)
 
     TEMPLATES = {
-        "dist/sitemap.xml": ["sitemap.xml", dict(SITEMAP_LINKS=SITEMAP_LINKS)],
-        "dist/robots.txt": ["robots.txt", dict(SITE_URL=ROOT_URL)],
-        "dist/_redirects": ["_redirects", dict(DEFAULT_LOCALE=DEFAULT_LOCALE)],
+        "dist/sitemap.xml": ["sitemap.xml.j2", dict(SITEMAP_LINKS=SITEMAP_LINKS)],
+        "dist/robots.txt": ["robots.txt.j2", dict(SITE_URL=ROOT_URL)],
+        "dist/_redirects": ["_redirects.j2", dict(DEFAULT_LOCALE=DEFAULT_LOCALE)],
     }
     for fl in TEMPLATES:
         tmp: str = TEMPLATES[fl][0]

@@ -33,12 +33,7 @@ def render_from_string(template: str, **data):
     )
 
 
-TEMP = r"""{% for x in DATA -%}
-# {{x|safe}}
-
-{{DATA[x]|safe}}
-
-{% endfor -%}"""
+TEMP = sh.read("template/md_template.md.j2")
 
 
 def get_all_lang_markdown():
