@@ -8,13 +8,13 @@ main:
     name: முகத்தோற்றக் கூறுகள்
     lekhan_sahayika:
       title: லேகான் சஹாயிகா
-      lekh: (features.lekhan_sahayika)
+      lekh_md: (features.lekhan_sahayika)
     phonetic_table:
       title: ஒலியியல் பயன்பாட்டு அட்டவணைகள்
-      lekh: (features.phonetic_table)
+      lekh_md: (features.phonetic_table)
     brahmic_support:
       title: அனைத்து பிராமிக் ஸ்கிரிப்ட்களையும் ஆதரிக்கவும்
-      lekh: (features.brahmic_support)
+      lekh_md: (features.brahmic_support)
     parivartak:
       title: லிபி பரிவர்த்தக்
-      lekh: (features.parivartak)
+      lekh_md: (features.parivartak)

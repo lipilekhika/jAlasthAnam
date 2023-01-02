@@ -7,13 +7,13 @@ main:
     name: विशेषताएं
     lekhan_sahayika:
       title: लेखन सहायिका
-      lekh: (features.lekhan_sahayika)
+      lekh_md: (features.lekhan_sahayika)
     phonetic_table:
       title: ध्वन्यात्मक प्रौयोग सूचियां
-      lekh: (features.phonetic_table)
+      lekh_md: (features.phonetic_table)
     brahmic_support:
       title: सभी ब्राह्मिक लिपियां उपलब्ध
-      lekh: (features.brahmic_support)
+      lekh_md: (features.brahmic_support)
     parivartak:
       title: लिपि परिवर्तक
-      lekh: (features.parivartak)
+      lekh_md: (features.parivartak)

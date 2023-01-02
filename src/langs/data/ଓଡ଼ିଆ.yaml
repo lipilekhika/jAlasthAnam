@@ -7,13 +7,13 @@ main:
     name: ବୈଶିଷ୍ଟ୍ୟଗୁଡିକ
     lekhan_sahayika:
       title: ଲେଖାନ୍ ସହାୟିକା
-      lekh: (features.lekhan_sahayika)
+      lekh_md: (features.lekhan_sahayika)
     phonetic_table:
       title: ଫୋନେଟିକ୍ ବ୍ୟବହାର ଟେବୁଲ୍
-      lekh: (features.phonetic_table)
+      lekh_md: (features.phonetic_table)
     brahmic_support:
       title: ସମସ୍ତ ବ୍ରାମିକ୍ ସ୍କ୍ରିପ୍ଟକୁ ସମର୍ଥନ କରନ୍ତୁ
-      lekh: (features.brahmic_support)
+      lekh_md: (features.brahmic_support)
     parivartak:
       title: ଲିପି ପରିବର୍ତ୍ତକ
-      lekh: (features.parivartak)
+      lekh_md: (features.parivartak)

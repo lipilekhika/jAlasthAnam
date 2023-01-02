@@ -4,10 +4,10 @@ export interface dattType {
     description: string;
     features: {
       name: string;
-      lekhan_sahayika: { title: string; lekh: string };
-      phonetic_table: { title: string; lekh: string };
-      brahmic_support: { title: string; lekh: string };
-      parivartak: { title: string; lekh: string };
+      lekhan_sahayika: { title: string; lekh_md: string };
+      phonetic_table: { title: string; lekh_md: string };
+      brahmic_support: { title: string; lekh_md: string };
+      parivartak: { title: string; lekh_md: string };
     };
   };
 }

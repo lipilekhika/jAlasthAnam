@@ -7,13 +7,13 @@ main:
     name: ਫੀਚਰ
     lekhan_sahayika:
       title: ਲੇਖਨ ਸਹਾਯਿਕਾ
-      lekh: (features.lekhan_sahayika)
+      lekh_md: (features.lekhan_sahayika)
     phonetic_table:
       title: ਫੋਨੇਟਿਕ ਵਰਤੋਂ ਟੇਬਲ
-      lekh: (features.phonetic_table)
+      lekh_md: (features.phonetic_table)
     brahmic_support:
       title: ਸਾਰੀਆਂ ਬ੍ਰਹਮਿਕ ਸਕ੍ਰਿਪਟਾਂ ਦਾ ਸਮਰਥਨ ਕਰੋ
-      lekh: (features.brahmic_support)
+      lekh_md: (features.brahmic_support)
     parivartak:
       title: ਲਿਪੀ ਪਰਿਵਰਤਨਕ
-      lekh: (features.parivartak)
+      lekh_md: (features.parivartak)

@@ -7,13 +7,13 @@ main:
     name: લક્ષણો
     lekhan_sahayika:
       title: લેખાન સહાયિકા
-      lekh: (features.lekhan_sahayika)
+      lekh_md: (features.lekhan_sahayika)
     phonetic_table:
       title: ફોનેટિક વપરાશ કોષ્ટકો
-      lekh: (features.phonetic_table)
+      lekh_md: (features.phonetic_table)
     brahmic_support:
       title: બધી બ્રહ્મિક લિપિને આધાર આપો
-      lekh: (features.brahmic_support)
+      lekh_md: (features.brahmic_support)
     parivartak:
       title: લિપીવર્તક
-      lekh: (features.parivartak)
+      lekh_md: (features.parivartak)

@@ -7,13 +7,13 @@ main:
     name: ఫీచర్లు
     lekhan_sahayika:
       title: లేఖన్ సహాయికా
-      lekh: (features.lekhan_sahayika)
+      lekh_md: (features.lekhan_sahayika)
     phonetic_table:
       title: ధ్వని వినియోగ పట్టికలు
-      lekh: (features.phonetic_table)
+      lekh_md: (features.phonetic_table)
     brahmic_support:
       title: అన్ని బ్రాహ్మిక్ లిపిలకు మద్దతు ఇవ్వండి
-      lekh: (features.brahmic_support)
+      lekh_md: (features.brahmic_support)
     parivartak:
       title: లిపి పరివర్తక్
-      lekh: (features.parivartak)
+      lekh_md: (features.parivartak)

@@ -7,13 +7,13 @@ main:
     name: वैशिष्ट्ये
     lekhan_sahayika:
       title: लेखन सहायिका
-      lekh: (features.lekhan_sahayika)
+      lekh_md: (features.lekhan_sahayika)
     phonetic_table:
       title: ध्वन्यात्मक उपयोग कोष्टक
-      lekh: (features.phonetic_table)
+      lekh_md: (features.phonetic_table)
     brahmic_support:
       title: सर्व ब्राह्मी लिपीचे समर्थन करा
-      lekh: (features.brahmic_support)
+      lekh_md: (features.brahmic_support)
     parivartak:
       title: Lipi parivartak
-      lekh: (features.parivartak)
+      lekh_md: (features.parivartak)

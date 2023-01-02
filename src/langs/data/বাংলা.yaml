@@ -7,13 +7,13 @@ main:
     name: বৈশিষ্ট্য
     lekhan_sahayika:
       title: লেখান সহায়িকা
-      lekh: (features.lekhan_sahayika)
+      lekh_md: (features.lekhan_sahayika)
     phonetic_table:
       title: ফোনেটিক ব্যবহারের সারণি
-      lekh: (features.phonetic_table)
+      lekh_md: (features.phonetic_table)
     brahmic_support:
       title: সমস্ত ব্রাহ্মিক স্ক্রিপ্ট সমর্থন করুন
-      lekh: (features.brahmic_support)
+      lekh_md: (features.brahmic_support)
     parivartak:
       title: লিপি পরিবর্তনক
-      lekh: (features.parivartak)
+      lekh_md: (features.parivartak)
