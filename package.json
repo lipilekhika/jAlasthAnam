@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "astro dev --host",
     "start": "astro dev",
-    "build": "astro build && python3 \"karah/make_sitemap.py\"",
+    "build": "astro build && python \"karah/make_sitemap.py\"",
     "preview": "astro preview",
     "astro": "astro",
     "lint": "prettier --plugin-search-dir . --check .",
