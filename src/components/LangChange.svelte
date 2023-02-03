@@ -18,7 +18,7 @@
   })();
 </script>
 
-<div class="flex justify-center my-10">
+<div class="my-10 flex justify-center">
   <Select
     value={val}
     className="px-1 font-bold bg-black text-white border-2 border-lime-500 outline-none rounded-lg"
