@@ -1,3 +1,4 @@
+import { navigate } from 'astro:transitions/client';
 import lang_data from 'langs/locales.json';
 import type { langKey } from 'langs/datt';
 
@@ -38,9 +39,9 @@ export const get_link = (url: string | null = null!, locale: string | null = nul
 };
 
 export const router_push = (url: string | null = null!, locale: string | null = null!) => {
-  window.location.href = get_link(url, locale);
-  // use this when using astro-spa
-  // (window as any).spa.navigate(get_link(url, locale), { replace: true });
+  const href = get_link(url, locale);
+  navigate(href);
+  // window.location.href = get_link(url, locale);
 };
 
 export const change_locale = (locale: string) => {

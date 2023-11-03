@@ -1,12 +1,11 @@
 ---
+import { ViewTransitions } from 'astro:transitions';
 import 'styles/base.postcss';
 import { get_current_locale, default_locale } from 'tools/i18n';
 import LangMetaTags from 'components/tags/LangMetaTags.astro';
 import LangChange from 'components/LangChange.svelte';
 import GoogleSearch from 'components/tags/GoogleSearch.astro';
 import GoogleAnalytics from 'components/tags/GoogleAnalytics.astro';
-// import { Spa } from 'astro-spa';
-// <!-- <Spa prefetch={false} defaultAnimation={false} progressBar={false} /> -->
 
 const { title, favicon, className, metaTags } = Astro.props;
 const locale = get_current_locale(Astro.params.lang!);
@@ -20,12 +19,14 @@ const URL = Astro.url.pathname;
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>{title}</title>
     <link rel="icon" href={`/${favicon || 'favicon.ico'}`} />
+    <ViewTransitions />
     <LangMetaTags {...metaTags} />
     <GoogleSearch />
   </head>
   <body class:list={['p-2', className]}>
     <slot />
     <LangChange client:idle value={locale} />
+    <!-- Currently ^ is working well without transition:persist -->
     <GoogleAnalytics />
   </body>
 </html>

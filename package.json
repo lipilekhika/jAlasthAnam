@@ -13,22 +13,22 @@
     "format": "prettier --plugin-search-dir . --write ."
   },
   "devDependencies": {
-    "@astrojs/partytown": "^1.0.3",
-    "@astrojs/svelte": "^1.0.2",
-    "@astrojs/tailwind": "^2.1.3",
-    "@types/js-yaml": "^4.0.5",
-    "@types/markdown-it": "^12.2.3",
-    "@types/node": "^18.11.18",
-    "astro": "^1.9.2",
+    "@astrojs/partytown": "^2.0.2",
+    "@astrojs/svelte": "^4.0.3",
+    "@astrojs/tailwind": "^5.0.2",
+    "@types/js-yaml": "^4.0.8",
+    "@types/markdown-it": "^13.0.5",
+    "@types/node": "^20.8.10",
+    "astro": "^3.4.3",
     "js-yaml": "^4.1.0",
-    "markdown-it": "^13.0.1",
-    "prettier": "^2.8.3",
-    "prettier-plugin-astro": "^0.7.2",
-    "prettier-plugin-svelte": "^2.9.0",
-    "prettier-plugin-tailwindcss": "^0.2.2",
-    "sass": "^1.58.0",
-    "svelte": "^3.55.1",
-    "tailwindcss": "^3.2.4",
-    "typescript": "^4.9.5"
+    "markdown-it": "^13.0.2",
+    "prettier": "^3.0.3",
+    "prettier-plugin-astro": "^0.12.1",
+    "prettier-plugin-svelte": "^3.0.3",
+    "prettier-plugin-tailwindcss": "^0.5.6",
+    "sass": "^1.69.5",
+    "svelte": "^4.2.2",
+    "tailwindcss": "^3.3.5",
+    "typescript": "^5.2.2"
   }
 }
